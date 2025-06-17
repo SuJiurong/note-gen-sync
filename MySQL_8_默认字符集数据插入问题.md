@@ -111,6 +111,5 @@ ALTER TABLE unit MODIFY unit_name VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8
 
 ## 参考资料
 
-- [MySQL官方文档：Collation and Character Set](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-sets.html)
 - [MySQL 8.0 排序规则差异](https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-sets.html#charset-unicode-sets-collations)
 - [MySQL升级8.0的新故障，utf8mb4_0900_ai_ci是啥？](https://www.lifesailor.me/archives/2676.html)
