@@ -66,11 +66,12 @@ CREATE TABLE IF NOT EXISTS user_feedback (
 ### Bot 流程
 
 1. **初始化**：
+
    - 连接 Telegram Bot API
    - 连接数据库
    - 加载已订阅的频道信息
-
 2. **定时任务**：
+
    - **抓取新帖子**：
      - 遍历已订阅的频道
      - 使用 Telegram API 获取 `channel_id` 的 `last_post_id` 之后的帖子
@@ -85,8 +86,8 @@ CREATE TABLE IF NOT EXISTS user_feedback (
      - 根据用户的 `interest_keywords` 和帖子的 `keywords`，筛选出用户可能感兴趣的帖子
      - 构建推送消息 (包含帖子摘要和链接)
      - 使用 Telegram Bot API 将消息发送给用户
-
 3. **用户交互**：
+
    - **`/start` 命令**：欢迎用户并提示使用方法，记录用户 ID 和聊天 ID 到 `users` 表
    - **用户标记感兴趣/不感兴趣**：在推送消息中添加按钮，用户点击后记录到 `user_feedback` 表
    - **`/set_keywords` 命令**：允许用户设置或修改感兴趣的关键词列表
@@ -159,13 +160,14 @@ if __name__ == '__main__':
 ## 部署和运行
 
 1. **安装依赖**：
+
 ```bash
 pip install python-telegram-bot apscheduler transformers jieba scikit-learn
 ```
 
 2. **配置 Bot Token**：将 `YOUR_TELEGRAM_BOT_TOKEN` 替换为你从 BotFather 获取的 Token
-
 3. **运行 Bot**：
+
 ```bash
 python your_bot_script.py
 ```
@@ -187,3 +189,6 @@ python your_bot_script.py
 * **AI 模型选择**：根据实际需求选择合适的 AI 模型，并进行调优
 * **关键词提取算法**：可以尝试不同的关键词提取算法，例如 TextRank、LDA 等
 * **代码安全性**：注意代码安全性，防止 SQL 注入等安全漏洞
+
+
+用Vue写Web端页面，手机端访问，首页给出
